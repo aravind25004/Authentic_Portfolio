@@ -1,0 +1,19 @@
+<h1>HI You have successfully registered</h1>
+<style>
+    h3{
+        color:red;
+    }
+</style>
+{% for message in messages %}
+<h3>{{message}}</h3>
+{%endfor%}
+<form method = "post" action="login">
+    {% csrf_token %}
+    <p>Username:</p>
+    <input type="text" name="username">
+    <br>
+    <p>Password:</p>
+    <input type="password" name="password">
+    <br>
+    <input type="submit">
+</form>
